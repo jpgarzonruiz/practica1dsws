@@ -5,7 +5,7 @@ const db = mysql.createConnection ({
     password: "juan1973",
     database: "cursos",
 });
-
+// ejemplo de cambio de comentario .....
 db.connect((err)=> {
     if (err) {
         throw err;
