@@ -14,3 +14,8 @@ db.connect((err)=> {
 });
 
 module.exports = db;
+
+//sudo npm install netlify-cli -g
+//npm init
+//netlify init
+//netlify dev

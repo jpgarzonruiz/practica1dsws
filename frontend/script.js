@@ -2,7 +2,6 @@ function guardar(){
 
     let nota=0.0;
     let apellidos='';
-
     let datoingresado = document.getElementById("correo").value;
 
     const myHeaders = new Headers();
