@@ -7,7 +7,7 @@ var port = process.env.PORT || 5000;
 
 const app = express();
 const estudiantesroutes = require("./backend/routes/estudiantesroutes.js");
-const ls = require("./backend/routes/profesoresroutes.js");
+const profesoresroutes = require("./backend/routes/profesoresroutes.js");
 const cursosroutes = require("./backend/routes/cursosroutes.js");
 
 
@@ -23,6 +23,6 @@ app.use ("/estudiantes",estudiantesroutes);
 app.use ("/profesores",profesoresroutes);
 app.use ("/cursos",cursosroutes);
 
-app.listen (6500,() =>{
+app.listen (8888,() =>{
     console.log("servidor activo");
 });

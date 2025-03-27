@@ -7,7 +7,7 @@ var cursosroutes = require("../../backend/routes/cursosroutes.js");
 
 app.use(express.json());
 app.use(cors());
-
+//nuevo codigo
 var router = express.Router();
 router.use ("/cursos",cursosroutes);
 

@@ -1,8 +1,8 @@
 const mysql = require("mysql2");
 const db = mysql.createConnection ({
     host: "127.0.0.1",
-    user: "jpgarzon",//"jpgarzon",
-    password: "juan1973",
+    user: "jpgarzon",
+    password: "ejemploclave",
     database: "cursos",
 });
 // ejemplo de cambio de comentario .....
@@ -18,4 +18,9 @@ module.exports = db;
 //sudo npm install netlify-cli -g
 //npm init
 //netlify init
-//netlify dev
+//netlify
+
+
+
+
+
