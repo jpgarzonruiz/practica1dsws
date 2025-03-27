@@ -7,19 +7,20 @@ class EstudiantesController{
     }
 
     consultar(req,res){
-        try{
+        try{/*
             db.query('SELECT  * FROM estudiantes',
             [],(err,rows) => {
                 if(err) {
                     res.status (400).send(err.message);
                 }
                 res.status(200).json(rows);
-            });
+            });*/
+            res.status (200).send ("Funciono ok");
         }catch (err){
             res.status(500).send(err.message);
         }
     }
-
+/*
     actualizar(req,res){
         const {id} = req.params;
         try{
@@ -37,7 +38,7 @@ class EstudiantesController{
             res.status(500).send(err.message);
         }
     }
-
+*/
     ingresar(req,res){
         try{
             const myJSON = JSON.stringify(req.body);
@@ -46,7 +47,7 @@ class EstudiantesController{
 
             const {dni,nombre,apellidos,email} = req.body;
             //console.log ("el dni que llega es de " + dni);
-
+/*
             db.query('INSERT INTO estudiantes (id, dni, nombre, apellidos, email) VALUES (NULL, ?, ?, ?, ?);',
             [dni,nombre,apellidos,email],(err,rows) => {
                 if(err) {
@@ -54,8 +55,8 @@ class EstudiantesController{
                 }else{
                     res.status(201).json({id: rows.insertId});
                 }
-            });
-
+            });*/
+            res.status(201).json({id: "123");
         }catch (err){
             res.status(500).send(err.message);
         }
@@ -77,7 +78,7 @@ class EstudiantesController{
         }
 
     }
-
+/*
     borrar(req,res){
         const {id} = req.params;
         try{
@@ -93,7 +94,7 @@ class EstudiantesController{
         }catch (err){
             res.status(500).send(err.message);
         }
-   }
+   }*/
 }
 
 module.exports = new EstudiantesController();
