@@ -22,12 +22,13 @@ function guardar(){
       redirect: "follow"
     };
 
-    fetch("http://localhost:8888/.netlify/functions/estudiantes", requestOptions)
+    fetch("https://ejemplodedsws.netlify.app/.netlify/functions/estudiantes", requestOptions)
       .then((response) => response.text())
       .then((result) => console.log(result))
       .catch((error) => console.error(error));
 }
-//eje
+
+
 function cargar(resultado){
     let transformado = JSON.parse(resultado);
     var salida="";
@@ -50,7 +51,7 @@ function listar(){
       method: "GET",
       redirect: "follow"
     };
-    fetch("http://localhost:8888/.netlify/functions/estudiantes", requestOptions)
+    fetch("https://ejemplodedsws.netlify.app/.netlify/functions/estudiantes", requestOptions)
       .then((response) =>
         response.text())
       .then((result) =>
@@ -59,7 +60,7 @@ function listar(){
         console.error(error));
 
 }
-
+/*
 function respuesta_actualizar(resultado){
     document.getElementById("rtaA").innerHTML = resultado;
 }
@@ -145,7 +146,9 @@ function eliminar_estudiante(){
       .then((response) =>
         response.text())
       .then((result) =>
+
         cargarEE(result))
       .catch((error) =>
         console.error(error));
 }
+*/
