@@ -22,7 +22,7 @@ function guardar(){
       redirect: "follow"
     };
 
-    fetch("./.netlify/functions/estudiantes", requestOptions)
+    fetch("./netlify/.netlify/functions/estudiantes", requestOptions)
       .then((response) => response.text())
       .then((result) => console.log(result))
       .catch((error) => console.error(error));
