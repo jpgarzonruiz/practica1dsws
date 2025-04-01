@@ -1,6 +1,3 @@
-//const db= require("../database/conexion.js");
-
-
 class EstudiantesController{
     construct(){
 
