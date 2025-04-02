@@ -11,15 +11,12 @@ class EstudiantesController{
     }
 
     ingresar(req,res){
-        try{/*
-            const myJSON = JSON.stringify(req.body);
-            console.log ("la información que llega es " + myJSON );
-            */
+        try{
 
             const {dni,nombre,apellidos,email} = req.body;
-            console.log ("Un dato como el documento de identidad es " + dni);
-
-            /*res.status(201).json({id: "123");*/
+            console.log ("Documento de identidad: " + dni);
+            console.log ("Nombres con apellidos:" + nombre + " " + apellidos);
+            console.log ("email: "+ email);
             res.status(200).send ("Funciono ok");
         }catch (err){
             res.status(500).send(err.message);
