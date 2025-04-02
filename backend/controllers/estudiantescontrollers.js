@@ -1,11 +1,12 @@
 class EstudiantesController{
-    let arreglo=[];
+
 
     construct(){
     }
 
     consultar(req,res){
         try{
+            let arreglo=[];
             let myObj = {dni: "1234", nombre: "Juan", apellidos: "Perez", email:"ejemplo@nose.com"};
             arreglo.push (myObj); //nuevo
 
