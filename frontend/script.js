@@ -56,7 +56,8 @@ function listar(){
         //response.text())
         console.log("la respuesta es de " + response))
       .then((result) =>
-        cargar(result))
+        //cargar(result))
+        console.log("esto es lo que se devuelve es decir nada:"))
       .catch((error) =>
         console.error(error));
 
