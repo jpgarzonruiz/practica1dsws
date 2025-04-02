@@ -53,7 +53,8 @@ function listar(){
     };
     fetch("https://ejemplodedsws.netlify.app/.netlify/functions/estudiantes", requestOptions)
       .then((response) =>
-        response.text())
+        //response.text())
+        console.log("la respuesta es de " + response))
       .then((result) =>
         cargar(result))
       .catch((error) =>
