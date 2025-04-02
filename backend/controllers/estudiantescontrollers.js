@@ -4,7 +4,7 @@ class EstudiantesController{
 
     consultar(req,res){
         try{
-            res.status(200).send ("Funciono ok");
+            res.status(200).send ("Funciono ok desde ws ");
         }catch (err){
             res.status(500).send(err.message);
         }

@@ -51,6 +51,16 @@ function listar(){
       method: "GET",
       redirect: "follow"
     };
+    fetch("https://ejemplodedsws.netlify.app/.netlify/functions/estudiantes", requestOptions)
+      .then((response) =>
+        response.text())
+        //console.log("la respuesta es de " + response.text))
+      .then((result) =>
+        //cargar(result))
+        console.log("esto aa es lo que se devuelve:"+result))
+      .catch((error) =>
+        console.error(error));
+    /*
     fetch("https://ejemplodedsws.netlify.app/.netlify/functions/webService", requestOptions)
       .then((response) =>
         response.text())
@@ -60,5 +70,6 @@ function listar(){
         console.log("esto aa es lo que se devuelve:"+result))
       .catch((error) =>
         console.error(error));
+    */
 
 }
