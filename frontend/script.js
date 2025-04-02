@@ -57,7 +57,7 @@ function listar(){
         console.log("la respuesta es de " + response))
       .then((result) =>
         //cargar(result))
-        console.log("esto es lo que se devuelve es decir nada:"))
+        console.log("esto aa es lo que se devuelve es decir nada:"))
       .catch((error) =>
         console.error(error));
 
