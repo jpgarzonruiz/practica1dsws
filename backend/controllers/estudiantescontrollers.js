@@ -12,7 +12,7 @@ class EstudiantesController{
     }
 
     ingresar(req,res){
-        try{
+        try{/*
             const myJSON = JSON.stringify(req.body);
             console.log ("la información que llega es " + myJSON );
 
@@ -20,7 +20,8 @@ class EstudiantesController{
             const {dni,nombre,apellidos,email} = req.body;
             console.log ("el dni que llega es de " + dni);
 
-            res.status(201).json({id: "123");
+            res.status(201).json({id: "123");*/
+            res.status(200).send ("Funciono ok");
         }catch (err){
             res.status(500).send(err.message);
         }
