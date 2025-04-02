@@ -38,7 +38,7 @@ function cargar(resultado){
         elemento = elemento + "<br>Documento de identidad: " + transformado.dni;
         elemento = elemento + "<br>Nombres: " + transformado.nombre;
         elemento = elemento + "<br>Apellidos: " + transformado.apellidos;
-        elemento = elemento + "<br>Correo electrónico: " + transformado.email;
+        elemento = elemento + "<br>Correo electrónico : " + transformado.email;
         salida = salida  + elemento + "<br><br>";
 
     /*
