@@ -34,12 +34,11 @@ function cargar(resultado){
     var salida="";
     var elemento="";
 
-    elemento = "ID: " + transformado.id;
-        elemento = elemento + "<br>Documento de identidad: " + transformado.dni;
-        elemento = elemento + "<br>Nombres: " + transformado.nombre;
-        elemento = elemento + "<br>Apellidos: " + transformado.apellidos;
-        elemento = elemento + "<br>Correo electrónico : " + transformado.email;
-        salida = salida  + elemento + "<br><br>";
+    elemento = "Documento de identidad: " + transformado.dni;
+    elemento = elemento + "<br>Nombres: " + transformado.nombre;
+    elemento = elemento + "<br>Apellidos: " + transformado.apellidos;
+    elemento = elemento + "<br>Correo electrónico : " + transformado.email;
+    salida = salida  + elemento + "<br><br>";
 
     /*
     for (let vc in transformado){

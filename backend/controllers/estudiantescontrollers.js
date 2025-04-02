@@ -4,7 +4,7 @@ class EstudiantesController{
 
     consultar(req,res){
         try{
-            let myObj = {dni: "1234", nombre: "Juan", apellidos: "Perez", enail:"ejemplo@nose.com"};
+            let myObj = {dni: "1234", nombre: "Juan", apellidos: "Perez", email:"ejemplo@nose.com"};
             let myJSON = JSON.stringify(myObj);
             res.status(200).send (myJSON);
             //res.status(200).send ("Funciono ok desde ws ");
