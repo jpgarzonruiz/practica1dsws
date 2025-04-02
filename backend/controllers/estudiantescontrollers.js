@@ -7,7 +7,6 @@ class EstudiantesController{
             let myObj = {dni: "1234", nombre: "Juan", apellidos: "Perez", email:"ejemplo@nose.com"};
             let myJSON = JSON.stringify(myObj);
             res.status(200).send (myJSON);
-            //res.status(200).send ("Funciono ok desde ws ");
         }catch (err){
             res.status(500).send(err.message);
         }
@@ -25,24 +24,6 @@ class EstudiantesController{
             res.status(500).send(err.message);
         }
     }
-/*
-    consultarDetalle(req,res){
-        const {id} = req.params;
-        try{
-
-            db.query('SELECT  * FROM estudiantes WHERE id=?',
-            [id],(err,rows) => {
-                if(err) {
-                    res.status (400).send(err.message);
-                }
-                res.status(200).json(rows[0]);
-            });
-        }catch (err){
-            res.status(500).send(err.message);
-        }
-
-    }
-*/
 }
 
 module.exports = new EstudiantesController();
