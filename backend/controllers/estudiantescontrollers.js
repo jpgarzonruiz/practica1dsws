@@ -5,7 +5,7 @@ class EstudiantesController{
 
     consultar(req,res){
         try{
-            res.status (200).send ("Funciono ok");
+            res.status(200).send ("Funciono ok");
         }catch (err){
             res.status(500).send(err.message);
         }
@@ -25,7 +25,7 @@ class EstudiantesController{
             res.status(500).send(err.message);
         }
     }
-
+/*
     consultarDetalle(req,res){
         const {id} = req.params;
         try{
@@ -42,7 +42,7 @@ class EstudiantesController{
         }
 
     }
-
+*/
 }
 
 module.exports = new EstudiantesController();

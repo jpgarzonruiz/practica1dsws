@@ -28,7 +28,7 @@ function guardar(){
       .catch((error) => console.error(error));
 }
 
-
+/*
 function cargar(resultado){
     let transformado = JSON.parse(resultado);
     var salida="";
@@ -43,8 +43,8 @@ function cargar(resultado){
         salida = salida  + elemento + "<br><br>";
     }
     document.getElementById("rta").innerHTML = salida;
-}
-
+}*/
+/*
 function listar(){
     event.preventDefault();
     const requestOptions = {
@@ -52,6 +52,24 @@ function listar(){
       redirect: "follow"
     };
     fetch("https://ejemplodedsws.netlify.app/.netlify/functions/estudiantes", requestOptions)
+      .then((response) =>
+        //response.text())
+        console.log("la respuesta es de " + response))
+      .then((result) =>
+        //cargar(result))
+        console.log("esto aa es lo que se devuelve es decir nada:"))
+      .catch((error) =>
+        console.error(error));
+
+}
+*/
+function listar(){
+    event.preventDefault();
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow"
+    };
+    fetch("https://ejemplodedsws.netlify.app/.netlify/functions/webService", requestOptions)
       .then((response) =>
         //response.text())
         console.log("la respuesta es de " + response))
