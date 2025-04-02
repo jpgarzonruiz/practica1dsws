@@ -33,17 +33,10 @@ function cargar(resultado){
     let transformado = JSON.parse(resultado);
     var salida="";
     var elemento="";
-/*
-    elemento = "Documento de identidad: " + transformado.dni;
-    elemento = elemento + "<br>Nombres: " + transformado.nombre;
-    elemento = elemento + "<br>Apellidos: " + transformado.apellidos;
-    elemento = elemento + "<br>Correo electrónico : " + transformado.email;
-    salida = salida  + elemento + "<br><br>";
-*/
+
 
     for (let vc in transformado){
-        elemento = "ID: " + transformado[vc].id;
-        elemento = elemento + "<br>Documento de identidad: " + transformado[vc].dni;
+        elemento =  "<br>Documento de identidad: " + transformado[vc].dni;
         elemento = elemento + "<br>Nombres: " + transformado[vc].nombre;
         elemento = elemento + "<br>Apellidos: " + transformado[vc].apellidos;
         elemento = elemento + "<br>Correo electrónico: " + transformado[vc].email;

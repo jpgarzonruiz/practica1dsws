@@ -8,13 +8,13 @@ class EstudiantesController{
         try{
             let arreglo=[];
             let myObj = {dni: "1234", nombre: "Juan", apellidos: "Perez", email:"ejemplo@nose.com"};
-            arreglo.push (myObj); //nuevo
-
             let myObj2 = {dni: "2", nombre: "J2uan", apellidos: "222Perez", email:"222ejemplo@nose.com"};
-            arreglo.push (myObj2); //nuevo
+
+            arreglo.push (myObj);
+            arreglo.push (myObj2);
 
             let myJSON = JSON.stringify(arreglo);
-            //let myJSON = JSON.stringify(myObj);
+
             res.status(200).send (myJSON);
         }catch (err){
             res.status(500).send(err.message);
