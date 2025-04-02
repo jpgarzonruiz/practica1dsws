@@ -28,12 +28,20 @@ function guardar(){
       .catch((error) => console.error(error));
 }
 
-/*Ejemplo cuando se devuelve algo
+//Ejemplo cuando se devuelve algo
 function cargar(resultado){
     let transformado = JSON.parse(resultado);
     var salida="";
     var elemento="";
 
+    elemento = "ID: " + transformado.id;
+        elemento = elemento + "<br>Documento de identidad: " + transformado.dni;
+        elemento = elemento + "<br>Nombres: " + transformado.nombre;
+        elemento = elemento + "<br>Apellidos: " + transformado.apellidos;
+        elemento = elemento + "<br>Correo electrónico: " + transformado.email;
+        salida = salida  + elemento + "<br><br>";
+
+    /*
     for (let vc in transformado){
         elemento = "ID: " + transformado[vc].id;
         elemento = elemento + "<br>Documento de identidad: " + transformado[vc].dni;
@@ -41,9 +49,9 @@ function cargar(resultado){
         elemento = elemento + "<br>Apellidos: " + transformado[vc].apellidos;
         elemento = elemento + "<br>Correo electrónico: " + transformado[vc].email;
         salida = salida  + elemento + "<br><br>";
-    }
+    }*/
     document.getElementById("rta").innerHTML = salida;
-}*/
+}
 
 function listar(){
     event.preventDefault();
@@ -56,8 +64,8 @@ function listar(){
         response.text())
         //console.log("la respuesta es de " + response.text))
       .then((result) =>
-        //cargar(result))
-        console.log("esto aa es lo que se devuelve:"+result))
+        cargar(result))
+        //console.log("Resultado desde el backend:"+result))
       .catch((error) =>
         console.error(error));
     /*

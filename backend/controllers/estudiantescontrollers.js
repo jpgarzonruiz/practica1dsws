@@ -4,7 +4,10 @@ class EstudiantesController{
 
     consultar(req,res){
         try{
-            res.status(200).send ("Funciono ok desde ws ");
+            let myObj = {dni: "1234", nombre: "Juan", apellidos: "Perez", enail:"ejemplo@nose.com"};
+            let myJSON = JSON.stringify(myObj);
+            res.status(200).send (myJSON);
+            //res.status(200).send ("Funciono ok desde ws ");
         }catch (err){
             res.status(500).send(err.message);
         }
