@@ -71,8 +71,8 @@ function listar(){
     };
     fetch("https://ejemplodedsws.netlify.app/.netlify/functions/webService", requestOptions)
       .then((response) =>
-        //response.text())
-        console.log("la respuesta es de " + response.text))
+        response.text())
+        //console.log("la respuesta es de " + response.text))
       .then((result) =>
         //cargar(result))
         console.log("esto aa es lo que se devuelve es decir nada:"))
