@@ -17,7 +17,7 @@ class EstudiantesController{
             */
 
             const {dni,nombre,apellidos,email} = req.body;
-            console.log ("el dni que llega es de " + dni);
+            console.log ("Un dato como el documento de identidad es " + dni);
 
             /*res.status(201).json({id: "123");*/
             res.status(200).send ("Funciono ok");
