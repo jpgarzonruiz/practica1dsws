@@ -1,6 +1,5 @@
 class EstudiantesController{
     construct(){
-
     }
 
     consultar(req,res){
@@ -15,12 +14,12 @@ class EstudiantesController{
         try{/*
             const myJSON = JSON.stringify(req.body);
             console.log ("la información que llega es " + myJSON );
-
+            */
 
             const {dni,nombre,apellidos,email} = req.body;
             console.log ("el dni que llega es de " + dni);
 
-            res.status(201).json({id: "123");*/
+            /*res.status(201).json({id: "123");*/
             res.status(200).send ("Funciono ok");
         }catch (err){
             res.status(500).send(err.message);

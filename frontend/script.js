@@ -28,7 +28,7 @@ function guardar(){
       .catch((error) => console.error(error));
 }
 
-/*
+/*Ejemplo cuando se devuelve algo
 function cargar(resultado){
     let transformado = JSON.parse(resultado);
     var salida="";
@@ -44,25 +44,7 @@ function cargar(resultado){
     }
     document.getElementById("rta").innerHTML = salida;
 }*/
-/*
-function listar(){
-    event.preventDefault();
-    const requestOptions = {
-      method: "GET",
-      redirect: "follow"
-    };
-    fetch("https://ejemplodedsws.netlify.app/.netlify/functions/estudiantes", requestOptions)
-      .then((response) =>
-        //response.text())
-        console.log("la respuesta es de " + response))
-      .then((result) =>
-        //cargar(result))
-        console.log("esto aa es lo que se devuelve es decir nada:"))
-      .catch((error) =>
-        console.error(error));
 
-}
-*/
 function listar(){
     event.preventDefault();
     const requestOptions = {
@@ -75,7 +57,7 @@ function listar(){
         //console.log("la respuesta es de " + response.text))
       .then((result) =>
         //cargar(result))
-        console.log("esto aa es lo que se devuelve es decir nada:"+result))
+        console.log("esto aa es lo que se devuelve:"+result))
       .catch((error) =>
         console.error(error));
 
