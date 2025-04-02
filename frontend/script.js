@@ -1,6 +1,5 @@
 function guardar(){
 
-    let nota=0.0;
     let apellidos='';
     let datoingresado = document.getElementById("correo").value;
 
@@ -36,9 +35,8 @@ function cargar(resultado){
 
 
     for (let vc in transformado){
-        elemento =  "<br>Documento de identidad: " + transformado[vc].dni;
-        elemento = elemento + "<br>Nombres: " + transformado[vc].nombre;
-        elemento = elemento + "<br>Apellidos: " + transformado[vc].apellidos;
+        elemento =  "<br>DI: " + transformado[vc].dni;
+        elemento = elemento + "<br>Nombres y apellidos: " + transformado[vc].nombre + " " + transformado[vc].apellidos;
         elemento = elemento + "<br>Correo electrónico: " + transformado[vc].email;
         salida = salida  + elemento + "<br><br>";
     }
