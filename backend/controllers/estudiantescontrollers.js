@@ -1,8 +1,15 @@
-class EstudiantesController{
+/*
+const express = require("express");
+const router = express.Router();
+const estudiantescontroller = require("../controllers/estudiantescontrollers.js");
+router.get("/",estudiantescontroller.consultar);
+router.post("/",estudiantescontroller.ingresar);
+module.exports = router;
+*/
 
+class EstudiantesController{
     construct(){
     }
-
     consultar(req,res){
         try{
             let arreglo=[];
@@ -19,10 +26,8 @@ class EstudiantesController{
             res.status(500).send(err.message);
         }
     }
-
     ingresar(req,res){
         try{
-
             const {dni,nombre,apellidos,email} = req.body;
             console.log ("Documento de identidad: " + dni);
             console.log ("Nombres con apellidos:" + nombre + " " + apellidos);
@@ -33,5 +38,4 @@ class EstudiantesController{
         }
     }
 }
-
 module.exports = new EstudiantesController();
