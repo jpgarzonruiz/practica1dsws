@@ -22,7 +22,7 @@ class EstudiantesController{
     ingresar(req,res){
         try{
             const {dni,nombre,apellidos,email} = req.body;
-            console.log ("Documento de identidad: " + dni);
+            console.log ("Documento de identidad:... " + dni);
             console.log ("Nombres con apellidos:" + nombre + " " + apellidos);
             console.log ("email: "+ email);
             res.status(200).send ("Funciono ok");
