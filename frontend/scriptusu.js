@@ -27,7 +27,6 @@ function guardar(){
       .catch((error) => console.error(error));
 }
 
-//Ejemplo cuando se devuelve algo
 function cargar(resultado){
     let transformado = JSON.parse(resultado);
     var salida="";
@@ -51,9 +50,7 @@ function listar(){
       redirect: "follow"
     };
 
-
-
-    fetch("https://ejemplodefirebase.netlify.app/.netlify/functions/usuarios?id=user124", requestOptions)
+    fetch("https://ejemplodefirebase.netlify.app/.netlify/functions/usuarios?id='user124'", requestOptions)
       .then((response) =>
         response.text())
       .then((result) =>
