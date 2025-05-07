@@ -1,5 +1,5 @@
 
-/Ejemplo cuando se devuelve algo
+//Ejemplo cuando se devuelve algo
 function cargar(resultado){
     let transformado = JSON.parse(resultado);
     var salida="";
