@@ -36,11 +36,13 @@ exports.handler = async (event, context) => {
         try{
             const admin = require('./firebaseAdmin');
 
-            const identifi = req.params.id;
+            const {id} = req.param;
+
 
 
             let arreglo=[];
-            let myObj = {dni: "1234", nombre: "ojo le paso un...", apellidos: "parametro" + identifi, email:"ejemplo@nose.com"};
+            let myObj = {dni: "1234", nombre: "ojo le paso un...", apellidos: "parametro y si lo lee es " +
+                         id, email:"ejemplo@nose.com"};
             let myObj2 = {dni: "2", nombre: "Otro nombre", apellidos: "222Perez", email:"222ejemplo@nose.com"};
 
             arreglo.push (myObj);
