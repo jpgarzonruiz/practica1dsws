@@ -21,7 +21,7 @@ function guardar(){
       redirect: "follow"
     };
 
-    fetch("https://ejemplodefirebase.netlify.app/.netlify/functions/estudiantes", requestOptions)
+    fetch("https://ejemplodefirebase.netlify.app/.netlify/functions/usuarios", requestOptions)
       .then((response) => response.text())
       .then((result) => console.log(result))
       .catch((error) => console.error(error));
@@ -50,7 +50,8 @@ function listar(){
       redirect: "follow"
     };
 
-    fetch("https://ejemplodefirebase.netlify.app/.netlify/functions/usuarios?id='user124'", requestOptions)
+    //usuarios?id=user124
+    fetch("https://ejemplodefirebase.netlify.app/.netlify/functions/usuarios", requestOptions)
       .then((response) =>
         response.text())
       .then((result) =>
