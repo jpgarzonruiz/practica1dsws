@@ -37,7 +37,7 @@ exports.handler = async (event, context) => {
             const admin = require('./firebaseAdmin');
 
 
-            const userDoc = await admin.firestore().collection('users').doc('user124').get();
+            const userDoc =  admin.firestore().collection('users').doc('user124').get();
 
 
             let arreglo=[];
