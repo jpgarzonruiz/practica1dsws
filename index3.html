@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Prueba de Usuario</title>
-  <script type="text/javascript" src="./frontend/scriptusu.js"></script>
+<meta charset="UTF-8">
+<script type="text/javascript" src="./frontend/script.js"></script>
 </head>
 <body>
-  <h1>Consultar Usuario</h1>
 
+<h1>Adicionar ejemplo de estudiante.....esto es desde el tercero</h1>
+<div>
+    <form id="adicionarEstudiante">
+        <div>
+            <label for="dni">Documento de identidad del estudiante:</label>
+            <input type="text" id="dni" placeHolder="" value="000000">
+            <br>
 
-    <label for="identificador">Ingreso el id de la colección:</label>
-    <input type="text" id="identificador" value="user124">
+            <label for="nombre">Nombres:</label>
+            <input type="text" id="nombre" placeHolder="">
+            <br>
 
-    <button id="consultar" click="oka()">Obtener Usuario</button>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" placeHolder="">
+            <br>
 
-    <p id="rta" >La respuesta del backend es de:</p>
-  <pre id="resultado"></pre>
+            <label for="correo">Email:</label>
+            <input type="text" id="correo" placeHolder="" value="">
+            <br>
+            <br>
+            <br>
+            <input type="submit" onclick="guardar()" value="Aceptar">
+        </div>
+    </form>
+
+</div>
+<h1>Listar ejemplo de estudiantes</h1>
+<div>
+    <form id="listarEstudiantes">
+        <p id="rta">Resultado:</p>
+        <input type="submit" onclick="listar()" value="Aceptar">
+    </form>
+</div>
 
 </body>
 </html>
