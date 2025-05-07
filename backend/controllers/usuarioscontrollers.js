@@ -31,18 +31,23 @@ exports.handler = async (event, context) => {
 };
 */
 
-    async consultarDetalle(req,res){
+     async consultarDetalle(req,res){
 
         try{
             const admin = require('./firebaseAdmin');
-
-
             const userDoc = await admin.firestore().collection('users').doc('user124').get();
+            // Verificar si el documento existe
+                if (!userDoc.exists) {
+                  return res.status(404).json({ error: 'Usuario no encontrado' });
+                }
+
+                // Obtener los datos del documento
+                const userData = userDoc.data();
+
 
 
             let arreglo=[];
-            let myObj = {dni: "1234", nombre: "ojo le paso un...", apellidos: "parametro y si lo lee es " +
-                         id, email:"ejemplo@nose.com"};
+            let myObj = {dni: "1234", nombre: "ojo le paso un...", apellidos: "parametro y si lo lee es ", email:"ejemplo@nose.com"};
             let myObj2 = {dni: "2", nombre: "Otro nombre", apellidos: "222Perez", email:"222ejemplo@nose.com"};
 
             arreglo.push (myObj);
