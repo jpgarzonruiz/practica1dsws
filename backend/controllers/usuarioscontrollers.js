@@ -31,8 +31,8 @@ class UsuariosController{
             console.log ("Nombres con apellidos:" + nombre + " " + apellidos);
             console.log ("email: "+ email);
             */
-
-            const docRef = await admin.firestore().collection('users').doc("user654").add(req.body);
+                // set por add
+            const docRef = await admin.firestore().collection('users').doc("user654").set(req.body);
 
             res.status(200).send ("Usuario agregado");
         }catch (err){
