@@ -33,21 +33,31 @@ exports.handler = async (event, context) => {
 
     consultardetalle(req,res){
         const admin = require('./firebaseAdmin');
+        exports.handler = async (event, context) => {
+          try {
+            const userId = event.queryStringParameters.id;
+            const userDoc = await admin.firestore().collection('users').doc(userId).get();
 
-        try{
-            let arreglo=[];
-            let myObj = {dni: "1234", nombre: "Juan", apellidos: "Perez", email:"ejemplo@nose.com"};
-            let myObj2 = {dni: "2", nombre: "J2uan", apellidos: "222Perez", email:"222ejemplo@nose.com"};
+            if (!userDoc.exists) {
+              return {
+                statusCode: 404,
+                body: JSON.stringify({ error: 'Usuario no encontrado' }),
+              };
+            }
 
-            arreglo.push (myObj);
-            arreglo.push (myObj2);
+            return {
+              statusCode: 200,
+              body: JSON.stringify(userDoc.data()),
+            };
+          } catch (error) {
+            return {
+              statusCode: 500,
+              body: JSON.stringify({ error: 'Error al obtener el usuario' }),
+            };
+          }
+        };
 
-            let myJSON = JSON.stringify(arreglo);
 
-            res.status(200).send (myJSON);
-        }catch (err){
-            res.status(500).send(err.message);
-        }
     }
     ingresar(req,res){
         try{
