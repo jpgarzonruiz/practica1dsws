@@ -45,6 +45,9 @@ exports.handler = async (event, context) => {
                 const userData = userDoc.data();
 
                 return res.status(200).json(userData);
+        }catch (err){
+            res.status(500).send(err.message);
+        }
 
 /*
             let arreglo=[];
