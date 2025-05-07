@@ -35,7 +35,7 @@ exports.handler = async (event, context) => {
 
         try{
             let arreglo=[];
-            let myObj = {dni: "1234", nombre: "Cambio", apellidos: "Perez", email:"ejemplo@nose.com"};
+            let myObj = {dni: "1234", nombre: "ojo le pso un p", apellidos: "parametro", email:"ejemplo@nose.com"};
             let myObj2 = {dni: "2", nombre: "Otro nombre", apellidos: "222Perez", email:"222ejemplo@nose.com"};
 
             arreglo.push (myObj);
