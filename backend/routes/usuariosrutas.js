@@ -7,7 +7,7 @@ router.post("/",usuarioscontroller.ingresar);
 */
 /* Ejemplo con parámetros */
 router.route("/:id")
-.get(usuarioscontroller.consultarDetalle)
+.get(usuarioscontroller.consultarDetalle);
 /*
 .put(usuarioscontroller.actualizar)
 .delete(usuarioscontroller.borrar);
