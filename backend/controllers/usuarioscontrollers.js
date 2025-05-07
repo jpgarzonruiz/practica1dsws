@@ -35,7 +35,7 @@ exports.handler = async (event, context) => {
 
         try{
             const admin = require('./firebaseAdmin');
-            const iden = req.params.iden;
+            const iden = "user124";
 
             //const userDoc = await admin.firestore().collection('users').doc('user124').get();
             const userDoc = await admin.firestore().collection('users').doc(iden).get();
