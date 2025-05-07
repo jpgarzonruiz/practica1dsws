@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const usuarioscontroller = require("../controllers/usuarioscontrollers.js");
 
-router.get("/",estudiantescontroller.consultar);
-router.post("/",estudiantescontroller.ingresar);
+router.get("/",usuarioscontroller.consultar);
+router.post("/",usuarioscontroller.ingresar);
 
 /* Ejemplo con parámetros */
 router.route("/:id")
