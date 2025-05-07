@@ -22,13 +22,19 @@ class UsuariosController{
         }
      }
 
-    ingresar(req,res){
+    async ingresar(req,res){
         try{
+            const admin = require('./firebaseAdmin');
+            /*
             const {dni,nombre,apellidos,email} = req.body;
             console.log ("Documento de identidad:... " + dni);
             console.log ("Nombres con apellidos:" + nombre + " " + apellidos);
             console.log ("email: "+ email);
-            res.status(200).send ("Funciono ok");
+            */
+
+            const docRef = await db.collection('usuarios').add(req.body);
+
+            res.status(200).send ("Usuario agregado");
         }catch (err){
             res.status(500).send(err.message);
         }
