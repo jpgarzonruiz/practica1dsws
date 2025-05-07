@@ -31,7 +31,7 @@ exports.handler = async (event, context) => {
 };
 */
 
-    consultardetalle(req,res){
+    consultarDetalle(req,res){
         const admin = require('./firebaseAdmin');
         exports.handler = async (event, context) => {
           try {
