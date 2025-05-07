@@ -32,7 +32,7 @@ class UsuariosController{
             console.log ("email: "+ email);
             */
 
-            const docRef = await db.collection('usuarios').add(req.body);
+            const docRef = await admin.firestore.collection('users').doc("nuevo").add(req.body);
 
             res.status(200).send ("Usuario agregado");
         }catch (err){
