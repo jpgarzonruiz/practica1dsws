@@ -43,7 +43,7 @@ exports.handler = async (event, context) => {
 
                 // Obtener los datos del documento
                 const userData = userDoc.data();
-                res.status(200).send (""+userData);
+                res.status(200).send ("Funciono bien hasta que intenta el json");
 
 
 
