@@ -31,13 +31,13 @@ exports.handler = async (event, context) => {
 };
 */
 
-    consultarDetalle(req,res){
+    async consultarDetalle(req,res){
 
         try{
             const admin = require('./firebaseAdmin');
 
 
-            const userDoc =  admin.firestore().collection('users').doc('user124').get();
+            const userDoc = await admin.firestore().collection('users').doc('user124').get();
 
 
             let arreglo=[];
