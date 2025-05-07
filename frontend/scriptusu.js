@@ -51,7 +51,7 @@ function listar(){
     };
 
     //usuarios?id=user124
-    fetch("https://ejemplodefirebase.netlify.app/.netlify/functions/usuarios", requestOptions)
+    fetch("https://ejemplodefirebase.netlify.app/.netlify/functions/usuarios?id='user124'", requestOptions)
       .then((response) =>
         response.text())
       .then((result) =>
