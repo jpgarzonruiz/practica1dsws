@@ -34,6 +34,9 @@ exports.handler = async (event, context) => {
     consultarDetalle(req,res){
 
         try{
+            const admin = require('./firebaseAdmin');
+
+
             let arreglo=[];
             let myObj = {dni: "1234", nombre: "ojo le pso un p", apellidos: "parametro", email:"ejemplo@nose.com"};
             let myObj2 = {dni: "2", nombre: "Otro nombre", apellidos: "222Perez", email:"222ejemplo@nose.com"};
