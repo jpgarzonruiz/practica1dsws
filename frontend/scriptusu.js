@@ -50,7 +50,10 @@ function listar(){
       method: "GET",
       redirect: "follow"
     };
-    fetch("https://ejemplodedsws.netlify.app/.netlify/functions/estudiantes", requestOptions)
+
+
+
+    fetch("https://ejemplodedsws.netlify.app/.netlify/functions/usuarios?id=user124", requestOptions)
       .then((response) =>
         response.text())
       .then((result) =>
