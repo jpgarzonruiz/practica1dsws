@@ -32,11 +32,11 @@ function cargar(resultado){
     var salida="";
     var elemento="";
 
-    salida = "listo  " + transformado.apellidos;
+    //salida = "listo  " + transformado.apellidos;
 
     for (const [clave, valor] of Object.entries(transformado)) {
         //console.log(`${clave}: ${valor}`);
-        salida = salida + "clave es " + clave +  " y el valor es " + valor;
+        salida = "Clave=" + clave +  " Valor=" + valor + "<br>" + salida;
     }
 /*
     for (let vc in transformado){
