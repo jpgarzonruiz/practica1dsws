@@ -35,7 +35,10 @@ exports.handler = async (event, context) => {
 
         try{
             const admin = require('./firebaseAdmin');
-            const userDoc = await admin.firestore().collection('users').doc('user124').get();
+            const id = req.params.id;
+
+            //const userDoc = await admin.firestore().collection('users').doc('user124').get();
+            const userDoc = await admin.firestore().collection('users').doc(id).get();
             // Verificar si el documento existe
                 if (!userDoc.exists) {
                   return res.status(404).json({ error: 'Usuario no encontrado' });
