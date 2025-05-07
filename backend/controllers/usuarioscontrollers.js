@@ -44,9 +44,9 @@ exports.handler = async (event, context) => {
                 // Obtener los datos del documento
                 const userData = userDoc.data();
 
+                return res.status(200).json(userData);
 
-
-
+/*
             let arreglo=[];
             let myObj = {dni: "1234", nombre: "ojo le paso un...", apellidos: "parametro y si lo lee es ", email:"ejemplo@nose.com"};
             let myObj2 = {dni: "2", nombre: "Otro nombre", apellidos: "222Perez", email:"222ejemplo@nose.com"};
@@ -60,6 +60,8 @@ exports.handler = async (event, context) => {
         }catch (err){
             res.status(500).send(err.message);
         }
+*/
+
 
         /*
         const admin = require('./firebaseAdmin');

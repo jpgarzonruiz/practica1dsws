@@ -32,14 +32,15 @@ function cargar(resultado){
     var salida="";
     var elemento="";
 
-
+    salida = "listo";
+/*
     for (let vc in transformado){
         elemento =  "<br>DI: " + transformado[vc].dni;
         elemento = elemento + "<br>Nombres y apellidos: " + transformado[vc].nombre + " " + transformado[vc].apellidos;
         elemento = elemento + "<br>Correo electrónico: " + transformado[vc].email;
         salida = salida  + elemento + "<br><br>";
     }
-
+*/
     document.getElementById("rta").innerHTML = salida;
 }
 
