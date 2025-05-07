@@ -43,6 +43,7 @@ exports.handler = async (event, context) => {
 
                 // Obtener los datos del documento
                 const userData = userDoc.data();
+                res.status(200).send (""+userData);
 
 
 
