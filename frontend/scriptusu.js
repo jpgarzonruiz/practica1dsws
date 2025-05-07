@@ -55,9 +55,9 @@ function listar(){
       method: "GET",
       redirect: "follow"
     };
-
+    let ndoc = document.getElementById("numdoc").value;
     //usuarios?id=user124
-    fetch("https://ejemplodefirebase.netlify.app/.netlify/functions/usuarios?iden=user124", requestOptions)
+    fetch("https://ejemplodefirebase.netlify.app/.netlify/functions/usuarios?iden="+ndoc, requestOptions)
       .then((response) =>
         response.text())
       .then((result) =>

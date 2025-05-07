@@ -2,102 +2,26 @@ class UsuariosController{
     construct(){
     }
 
-
-    /*
-    const admin = require('./firebaseAdmin');
-
-exports.handler = async (event, context) => {
-  try {
-    const userId = event.queryStringParameters.id;
-    const userDoc = await admin.firestore().collection('users').doc(userId).get();
-
-    if (!userDoc.exists) {
-      return {
-        statusCode: 404,
-        body: JSON.stringify({ error: 'Usuario no encontrado' }),
-      };
-    }
-
-    return {
-      statusCode: 200,
-      body: JSON.stringify(userDoc.data()),
-    };
-  } catch (error) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Error al obtener el usuario' }),
-    };
-  }
-};
-*/
-
      async consultarDetalle(req,res){
 
         try{
             const admin = require('./firebaseAdmin');
             let iden = req.query.iden;
-            //let iden = "user124";
-            //'user124'
             const userDoc = await admin.firestore().collection('users').doc(iden).get();
-            //const userDoc = await admin.firestore().collection('users').doc(iden).get();
-            // Verificar si el documento existe
-                if (!userDoc.exists) {
-                  return res.status(404).json({ error: 'Usuario no encontrado:' + iden  });
-                }
-
-                // Obtener los datos del documento
-                const userData = userDoc.data();
-
-                return res.status(200).json(userData);
-        }catch (err){
-            res.status(500).send(err.message);
-        }
-
-/*
-            let arreglo=[];
-            let myObj = {dni: "1234", nombre: "ojo le paso un...", apellidos: "parametro y si lo lee es ", email:"ejemplo@nose.com"};
-            let myObj2 = {dni: "2", nombre: "Otro nombre", apellidos: "222Perez", email:"222ejemplo@nose.com"};
-
-            arreglo.push (myObj);
-            arreglo.push (myObj2);
-
-            let myJSON = JSON.stringify(arreglo);
-
-            res.status(200).send (myJSON);
-        }catch (err){
-            res.status(500).send(err.message);
-        }
-*/
-
-
-        /*
-        const admin = require('./firebaseAdmin');
-        exports.handler = async (event, context) => {
-          try {
-            const userId = event.queryStringParameters.id;
-            const userDoc = await admin.firestore().collection('users').doc(userId).get();
 
             if (!userDoc.exists) {
-              return {
-                statusCode: 404,
-                body: JSON.stringify({ error: 'Usuario no encontrado' }),
-              };
+                return res.status(404).json({ error: 'Usuario no encontrado:' + iden  });
             }
 
-            return {
-              statusCode: 200,
-              body: JSON.stringify(userDoc.data()),
-            };
-          } catch (error) {
-            return {
-              statusCode: 500,
-              body: JSON.stringify({ error: 'Error al obtener el usuario' }),
-            };
-          }
-        };
+            // Obtener los datos del documento
+            const userData = userDoc.data();
 
-        */
-    }
+            return res.status(200).json(userData);
+        }catch (err){
+            res.status(500).send(err.message);
+        }
+     }
+
     ingresar(req,res){
         try{
             const {dni,nombre,apellidos,email} = req.body;
