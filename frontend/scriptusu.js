@@ -53,7 +53,7 @@ function listar(){
 
 
 
-    fetch("https://ejemplodedsws.netlify.app/.netlify/functions/usuarios?id=user124", requestOptions)
+    fetch("https://ejemplodefirebase.netlify.app/.netlify/functions/usuarios?id=user124", requestOptions)
       .then((response) =>
         response.text())
       .then((result) =>
