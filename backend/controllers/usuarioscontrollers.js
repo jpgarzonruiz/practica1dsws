@@ -36,7 +36,7 @@ exports.handler = async (event, context) => {
         try{
             const admin = require('./firebaseAdmin');
 
-            const identifi = req.id;
+            const identifi = req.params.id;
 
 
             let arreglo=[];
