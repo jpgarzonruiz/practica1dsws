@@ -34,7 +34,7 @@ function oka(){
     });
     */
     const userId = 'user124';
-     event.preventDefault();
+    event.preventDefault();
     const requestOptions = {
       method: "GET",
       redirect: "follow"
