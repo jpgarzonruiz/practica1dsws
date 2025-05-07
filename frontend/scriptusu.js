@@ -32,7 +32,7 @@ function cargar(resultado){
     var salida="";
     var elemento="";
 
-    salida = "listo";
+    salida = "listo" + transformado.apellidos;
 /*
     for (let vc in transformado){
         elemento =  "<br>DI: " + transformado[vc].dni;
