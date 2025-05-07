@@ -42,7 +42,7 @@ exports.handler = async (event, context) => {
             //const userDoc = await admin.firestore().collection('users').doc(iden).get();
             // Verificar si el documento existe
                 if (!userDoc.exists) {
-                  return res.status(404).json({ error: 'Usuario no encontrado' });
+                  return res.status(404).json({ error: 'Usuario no encontrado:' + iden  });
                 }
 
                 // Obtener los datos del documento
